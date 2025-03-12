@@ -19,6 +19,7 @@ repositories {
     maven("https://hub.spigotmc.org/nexus/content/repositories/snapshots/")
     maven("https://repo.papermc.io/repository/maven-public/")
     maven("https://s01.oss.sonatype.org/content/groups/public/")
+    mavenLocal()
 }
 
 dependencies {
@@ -27,7 +28,7 @@ dependencies {
         testImplementation(dependencyNotation)
     }
 
-    implementation("net.guizhanss:guizhanlib-all:2.2.0")
+    implementation("net.guizhanss:guizhanlib-all:2.2.0-Folia")
     implementation("org.bstats:bstats-bukkit:3.1.0")
     implementation("com.google.code.findbugs:jsr305:3.0.2")
     api("com.github.houbb:pinyin:0.4.0")
@@ -139,6 +140,7 @@ bukkit {
     authors = listOf("ybw0014")
     description = "A library plugin for Simplified Chinese Slimefun addons."
     website = "https://github.com/ybw0014/GuizhanLibPlugin"
+    foliaSupported = true
     depend = listOf("Slimefun")
 }
 
